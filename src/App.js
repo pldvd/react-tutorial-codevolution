@@ -10,6 +10,9 @@ import './App.css';
 
 
 class App extends Component {
+  addTwo(number) {
+    return number + 2
+  }
   render() {
     return (
       <div className="App">
