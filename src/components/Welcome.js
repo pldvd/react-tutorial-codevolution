@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Introduction from './Introduction';
 
 export default class Welcome extends Component {
 
@@ -8,6 +9,7 @@ export default class Welcome extends Component {
     return (
       <div>
         <h1>Welcome {this.name}</h1>
+        <Introduction />
       </div>
     )
   }
