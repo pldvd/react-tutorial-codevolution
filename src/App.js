@@ -2,6 +2,7 @@ import React from 'react';
 import {Hello} from './components/Hello';
 import Welcome from './components/Welcome';
 import Message from './components/Message'
+import Counter from './components/Counter'
 import './App.css';
 
 
@@ -12,6 +13,7 @@ function App() {
       <Hello />
       <Welcome name="Buddy" topic="React"/>
       <Message />
+      <Counter />
     </div>
   )
 }
