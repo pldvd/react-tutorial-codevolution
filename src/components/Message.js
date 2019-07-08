@@ -18,6 +18,7 @@ class Message extends Component {
       </div>
     )
   }
+  //toggleing a boolean state depends on the calue of the previous state, hence it is done by passing the prevState object to the setState method 
   toggleSub() {
     this.setState(prevState => ({
       subscr: !prevState.subscr,
