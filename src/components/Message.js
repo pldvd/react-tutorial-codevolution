@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 
 class Message extends Component {
 
-constructor() {
-  super();
-  this.state = {
-    messageText: 'Welcome Visitor'
+  constructor() {
+    super();
+    this.state = {
+      subscr: false,
+      messageText: 'Welcome Visitor'
+    }
   }
-}
 
   render() {
     return (
@@ -17,29 +18,25 @@ constructor() {
       </div>
     )
   }
-  // toggleSub() {
-  //   return this.setState({
-  //        subscribed: !subscribed,
-  //     })
-  // }
+  toggleSub() {
+    this.setState(prevState => ({
+      subscr: !prevState.subscr,
+    })
+    )
+  }
 
   changeMessage() {
-    this.setState({
-      messageText: "Thank you for subscription."
-    })
+    this.toggleSub();
+    if (this.state.subscr) {
+      this.setState({
+        messageText: "Thank you for subscribing!",
+      })
+    } else {
+      this.setState({
+        messageText: 'Welcome Visitor',
+      })
+    }
   }
-  // changeMessage() {
-  //   this.toggleSub();
-  //   if (this.state.subscribed) {
-  //     this.setState({
-  //       messageText: "Thank you for subscribing!",
-  //     })
-  //   } else {
-  //     this.setState({
-  //       messageText: 'Welcome Visitor',
-  //     })
-  //   }
-  // }
 }
 
 export default Message;
