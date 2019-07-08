@@ -1,6 +1,7 @@
 import React from 'react';
-import {Hello} from './components/Hello'
-import Welcome from './components/Welcome'
+import {Hello} from './components/Hello';
+import Welcome from './components/Welcome';
+import Message from './components/Message'
 import './App.css';
 
 
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <Hello />
       <Welcome name="Buddy" topic="React"/>
+      <Message />
     </div>
   )
 }
