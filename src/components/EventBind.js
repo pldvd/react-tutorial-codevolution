@@ -10,6 +10,7 @@ class EventBind extends Component {
     }
     // bind event handlers to this in the constructor, so page does not re-render with every setState
     this.changeMessage = this.changeMessage.bind(this)
+    this.greet = this.greet.bind(this)
   }
   changeMessage() {
 
@@ -19,13 +20,16 @@ class EventBind extends Component {
       message: newMessage
     })
   }
+  greet(name) {
+    alert(`Hello ${name}`)
+  }
   render() {
     return <div>
     <p>{this.state.message}</p>
     {/* <button onClick={() => this.changeMessage()}>Click</button> */}
     {/* <button onClick={this.changeMessage.bind(this)}>Click</button> */}
     <button onClick={this.changeMessage}>Click</button>
-    <Child><p>Hello from CHILD props</p></Child>
+    <Child greet={this.greet}><p>Hello from CHILD props</p></Child>
     </div>
   }
 }

@@ -5,6 +5,7 @@ export default function Child(props) {
     <div>
       <p>Hello from child.</p>
       {props.children}
+      <button onClick={() => props.greet('David')}>GreetMe</button>
     </div>
   )
 }
