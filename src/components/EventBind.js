@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Child from './Child'
 
 class EventBind extends Component {
   constructor(props) {
@@ -7,6 +8,8 @@ class EventBind extends Component {
     this.state = {
       message: 'hello'
     }
+    // bind event handlers to this in the constructor, so page does not re-render with every setState
+    this.changeMessage = this.changeMessage.bind(this)
   }
   changeMessage() {
 
@@ -20,7 +23,9 @@ class EventBind extends Component {
     return <div>
     <p>{this.state.message}</p>
     {/* <button onClick={() => this.changeMessage()}>Click</button> */}
-    <button onClick={this.changeMessage.bind(this)}>Click</button>
+    {/* <button onClick={this.changeMessage.bind(this)}>Click</button> */}
+    <button onClick={this.changeMessage}>Click</button>
+    <Child><p>Hello from CHILD props</p></Child>
     </div>
   }
 }
