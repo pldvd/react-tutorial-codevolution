@@ -6,6 +6,7 @@ import Counter from './components/Counter'
 import Adder from './components/Adder'
 import EventBind from './components/EventBind'
 import './App.css';
+import UserGreet from './components/UserGreet';
 
 
 //we can add properties(props) to React elements defined in the JSX as element attributes, these props will we passed on to the child element for use as either a function parameter in a functional component or this.props.propName in a class component
@@ -24,6 +25,7 @@ class App extends Component {
       <Counter addTwo = {this.addTwo}/>
       <Adder />
       <EventBind />
+      <UserGreet />
     </div>
     )
   }

@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Child from './Child'
 
 class EventBind extends Component {
@@ -24,13 +24,15 @@ class EventBind extends Component {
     alert(`Hello ${name}`)
   }
   render() {
-    return <div>
-    <p>{this.state.message}</p>
-    {/* <button onClick={() => this.changeMessage()}>Click</button> */}
-    {/* <button onClick={this.changeMessage.bind(this)}>Click</button> */}
-    <button onClick={this.changeMessage}>Click</button>
-    <Child greet={this.greet}><p>Hello from CHILD props</p></Child>
-    </div>
+    return (
+      <div>
+        <p>{this.state.message}</p>
+        {/* <button onClick={() => this.changeMessage()}>Click</button> */}
+        {/* <button onClick={this.changeMessage.bind(this)}>Click</button> */}
+        <button onClick={this.changeMessage}>Click</button>
+        <Child greet={this.greet}><p>Hello from CHILD props</p></Child>
+      </div>
+    )
   }
 }
 
