@@ -19,7 +19,8 @@ class EventBind extends Component {
   render() {
     return <div>
     <p>{this.state.message}</p>
-    <button onClick={() => this.changeMessage()}>Click</button>
+    {/* <button onClick={() => this.changeMessage()}>Click</button> */}
+    <button onClick={this.changeMessage.bind(this)}>Click</button>
     </div>
   }
 }
