@@ -8,7 +8,7 @@ class EventBind extends Component {
       message: 'hello'
     }
   }
-  changeMessage = () => {
+  changeMessage() {
 
     let newMessage = this.state.message === 'hello' ? 'goodbye' : 'hello'
 
@@ -19,7 +19,7 @@ class EventBind extends Component {
   render() {
     return <div>
     <p>{this.state.message}</p>
-    <button onClick={this.changeMessage}>Click</button>
+    <button onClick={() => this.changeMessage()}>Click</button>
     </div>
   }
 }
